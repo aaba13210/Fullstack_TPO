@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /*Cursiva para H1 "font-family: 'Great Vibes', cursive;"*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tiro+Devanagari+Hindi:ital@1&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Tiro Devanagari Hindi', serif;;
 }
 
 .grid_container > * {
@@ -11,12 +12,11 @@
 }
 
 html {
-    font-size: 70%;
+    font-size: 90%;
     height: 100%;
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif; 
     font-size: 1.2rem;
     min-height: 100%;
     background-color: rgba(250, 235, 215, 0.65);
@@ -40,6 +40,11 @@ body {
 
 .sidebar {
     grid-area: sidebar;
+    padding: 5px;
+}
+.sidebar-derecho{
+  grid-area: sidebar-derecho;
+  padding: 5px;
 }
 
 .footer {
@@ -57,23 +62,82 @@ body {
     grid-template:
     "header" 180px
     "navbar" 50px
-    "sidebar" auto 
+    "sidebar-derecho" auto 
     "main" auto
+    "sidebar" auto 
     "footer" 100px;
 }
 
 @media (min-width: 600px) {
-    html {
-        font-size: 100%;
-    }
-    .grid_container {
-        grid-template:
-        "header header" 180px
-        "navbar navbar" 25px
-        "main sidebar"  500px 
-        "footer footer" 100px /
-        auto min-content;
-    }
+  *{
+    font-size: 105%;
+  }
+  .grid_container {
+      grid-template:
+      "header header" 180px
+      "navbar navbar" 25px
+      "sidebar-derecho  main"  500px 
+      "sidebar sidebar" auto
+      "footer footer" 100px /
+      auto  auto ;
+  }
+}
+@media (min-width: 900px) {
+  *{
+    font-size: 105%;
+  }
+  .grid_container {
+      grid-template:
+      "header header header" 180px
+      "navbar navbar navbar" 25px
+      "sidebar-derecho main sidebar"  500px 
+      "footer footer footer" 100px /
+      250px auto  auto ;
+  }
+}
+
+.Destacado1{
+  width: 80px;
+  height: 80px;
+  grid-area: Destacado1;
+}
+.Destacado1-tx{
+  grid-area: Destacado1-tx;
+}
+.Destacado2-tx{
+  grid-area: Destacado2-tx;
+}
+.Destacado3-tx
+{
+  grid-area: Destacado3-tx;
+}
+.Destacado4-tx
+{
+  grid-area: Destacado4-tx;
+}
+.Destacado2{
+  width: 80px;
+  height: 80px;
+  grid-area: Destacado2;
+}.Destacado3{
+  width: 80px;
+  height: 80px;
+  grid-area: Destacado3;
+}.Destacado4{
+  width: 80px;
+  height: 80px;
+  grid-area: Destacado4;
+}
+.menucontainer{
+  display: flex;
+  align-items: center;
+  display: grid;  
+  gap: 10px;
+  grid-template:
+  "Destacado1 Destacado1-tx Destacado2 Destacado2-tx" 80px
+  "Destacado3 Destacado3-tx Destacado4 Destacado4-tx" 80px /
+  20px
+  
 }
 
 h1{
