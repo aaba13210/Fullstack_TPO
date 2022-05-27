@@ -30,7 +30,6 @@ body {
     display: flex;
     justify-content: space-around   ;
     grid-area: navbar;
-    text-decoration: none;
 }
 
 .main {
@@ -58,8 +57,8 @@ body {
     grid-template:
     "header" 180px
     "navbar" 50px
+    "sidebar" auto 
     "main" auto
-    "sidebar" 100px
     "footer" 100px;
 }
 
@@ -71,9 +70,9 @@ body {
         grid-template:
         "header header" 180px
         "navbar navbar" 25px
-        "main sidebar" auto 
+        "main sidebar"  500px 
         "footer footer" 100px /
-        auto 300px;
+        auto min-content;
     }
 }
 
@@ -88,7 +87,7 @@ h1{
 
   .imagen {
     display: flex;
-    background: image-set("./Imagenes/Portada.jpg") repeat-x;
+    background: url(/Imagenes/Portada.jpg) repeat-x;
     height: 180px;
     padding: 0;
   }
@@ -117,6 +116,7 @@ h1{
     -o-transition-duration: 1s;
     background-color: antiquewhite;
     width: 100%;
+    text-decoration: none;
 }
 .BtnNav:hover{
     position: relative;
@@ -130,22 +130,25 @@ h1{
     background-color:coral;
     color:black;
 }
-.navigation{
-    bottom: 20px;
-  }
   .slidershow{
-    padding: 5px;
     overflow: hidden;
+    max-width: 500px;
+    height: auto;
   }
   .navigation{
+    bottom: 20px;
+    margin-bottom: 1px;
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
   }
   .bar{
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 10px;
     border: 2px solid #fff;
-    margin: 2px;
+    margin: 6px;
     cursor: pointer;
     transition: 0.4s;
   }
@@ -154,7 +157,8 @@ h1{
   }
   
   input[name="r"]{
-      position: absolute;
+    position: absolute;
+    visibility: hidden;
   }
   
   .slides{
