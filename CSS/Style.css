@@ -90,56 +90,29 @@ body {
       grid-template:
       "header header header" 180px
       "navbar navbar navbar" 25px
-      "sidebar-derecho main sidebar"  500px 
+      "sidebar-derecho main sidebar"  auto
       "footer footer footer" 100px /
-      250px auto  auto ;
+      250px auto  250px ;
   }
 }
-
-.Destacado1{
-  width: 80px;
-  height: 80px;
-  grid-area: Destacado1;
-}
-.Destacado1-tx{
-  grid-area: Destacado1-tx;
-}
-.Destacado2-tx{
-  grid-area: Destacado2-tx;
-}
-.Destacado3-tx
-{
-  grid-area: Destacado3-tx;
-}
-.Destacado4-tx
-{
-  grid-area: Destacado4-tx;
-}
-.Destacado2{
-  width: 80px;
-  height: 80px;
-  grid-area: Destacado2;
-}.Destacado3{
-  width: 80px;
-  height: 80px;
-  grid-area: Destacado3;
-}.Destacado4{
-  width: 80px;
-  height: 80px;
-  grid-area: Destacado4;
-}
 .menucontainer{
-  display: flex;
+  align-content: center;
   align-items: center;
-  display: grid;  
-  gap: 10px;
-  grid-template:
-  "Destacado1 Destacado1-tx Destacado2 Destacado2-tx" 80px
-  "Destacado3 Destacado3-tx Destacado4 Destacado4-tx" 80px /
-  20px
-  
-}
+  flex-wrap: wrap;
+  align-content: space-around;
 
+}
+.menucontainer > img{
+  padding: 2px;
+  width: 100px;
+  height: 100px;
+  gap: 10px;
+}
+.menucontainer > p {
+  padding: 2px;
+  display: flex;
+  text-align: center;
+}
 h1{
     display: flex;
     justify-content: center;
@@ -151,7 +124,7 @@ h1{
 
   .imagen {
     display: flex;
-    background: url(/Imagenes/Portada.jpg) repeat-x;
+    background-image: url(/Imagenes/Portada.jpg) repeat-x;
     height: 180px;
     padding: 0;
   }
@@ -227,7 +200,7 @@ h1{
   
   .slides{
     width: 500%;
-    height: 100%;
+    height: 500px;
     display: flex;
   }
   
