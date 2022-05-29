@@ -196,6 +196,7 @@ h1{
     max-width: 500px;
     height: auto;
   }
+  /*Diseño de barra de navegacion del slideshow*/
   .navigation{
     bottom: 20px;
     margin-bottom: 1px;
@@ -205,6 +206,7 @@ h1{
     height: auto;
     justify-content: center;
   }
+  /*Objetos que permiten cambiar entre imagenes del slideshow*/
   .bar{
     width: 50px;
     height: 10px;
@@ -213,6 +215,7 @@ h1{
     cursor: pointer;
     transition: 0.4s;
   }
+  /*Animacion de hover en items de cambio de imagen*/
   .bar:hover{
     background: #fff;
   }
@@ -232,6 +235,7 @@ h1{
     width: 20%;
     transition: 0.6s;
   }
+  /*Tamaño de imagen en el slideshow*/
   .slide img{
     max-width: 500%;
     height: 100%;
@@ -252,6 +256,7 @@ h1{
   #r5:checked ~ .s1{
     margin-left: -80%;
   }
+  /*Diseño de los mapas en la hoja de sedes*/
 .maps {
   text-align: center;
   flex-direction: row;
@@ -260,6 +265,7 @@ h1{
   width: 100%;
   justify-content: space-around;
 }
+/*Tamaño de imagenes en el menu y en el sidebar de inicio*/
 .Destacado{
   width: 200px;
   height:auto;
