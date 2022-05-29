@@ -28,8 +28,54 @@
         <iframe width="200" height="auto" src="https://www.youtube.com/embed/-yFeZekJxZ8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </aside>
     <article class="main">
-        <div>Formulario de registro</div>
-
+        <div class="container_form">
+            <form action="" class="form" id="form" autocomplete="off">
+              <h2 class="form-titulo">Regístrate al </h2>
+                  <h1>Club Encafeinados</h1>
+                  
+              <div class="form-input myname">
+                <input type="text" id="myname">
+                <label for="myname">Nombre</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-input surname">
+                <input type="text" id="surname">
+                <label for="surname">Apellidos</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-input email">
+                <input type="email" id="email">
+                <label for="email">Correo electrónico</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-input mobile">
+                <input type="text" id="mobile">
+                <label for="mobile">Celular</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-input password">
+                <input type="password" id="password">
+                <label for="password">Contraseña</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-input repeatPassword">
+                <input type="password" id="repeatPassword">
+                <label for="repeatPassword">Repetir Contraseña</label>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-termsAndConditions termsAndConditions">
+                <input type="checkbox" id="termsAndConditions">
+                <label for="termsAndConditions">He leído y acepto los </label>
+                <a href="#">Términos y Condiciones</a>
+                <p class="mensajeError"></p>
+              </div>
+              <div class="form-boton" >
+                <input type="submit" value="Enviar">
+              </div>
+              <p class="mensajeCorrecto"></p>
+            </form>
+          </div>
+          <script src="./JS/Script.js"></script>
     </article>
     <footer class="footer">
         <div class="iconos">
