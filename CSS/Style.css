@@ -1,3 +1,4 @@
+/*Import de fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tiro+Devanagari+Hindi:ital@1&display=swap');
 
 * {
@@ -6,7 +7,7 @@
     padding: 0;
     font-family: 'Tiro Devanagari Hindi', serif;;
 }
-
+/*Indico a mi grid que tenga sombra*/
 .grid_container > * {
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
@@ -22,6 +23,7 @@ body {
     background-color: rgba(250, 235, 215, 0.65);
 }
 
+/*Defino las areas del grid y sus propiedades*/
 .header {
     grid-area: header;
 }
@@ -35,7 +37,6 @@ body {
 .main {
     grid-area: main;
     display: flex;
-    justify-content: center;
 }
 
 .sidebar {
@@ -51,10 +52,11 @@ body {
     background-color: darkgrey;
     grid-area: footer;
 }
+
 .iconos {
     font-size: 2rem;
 }
-
+/*Diseño del grid, por defecto toma dispositivos*/
 .grid_container { 
     display: grid;
     gap: 10px;
@@ -67,7 +69,19 @@ body {
     "sidebar" auto 
     "footer" 100px;
 }
+.item_menu{
+  width: auto;
+  height: auto;
+}
+.grid_menu{
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;}
 
+/*Diseño de grid para pantallas mas grandes (tablets y otros)*/
 @media (min-width: 600px) {
   *{
     font-size: 105%;
@@ -82,6 +96,7 @@ body {
       auto  auto ;
   }
 }
+/*Diseño con el tamaño mas grande, con tres columnas, para escritorio*/
 @media (min-width: 900px) {
   *{
     font-size: 105%;
@@ -95,6 +110,7 @@ body {
       250px auto  250px ;
   }
 }
+
 .menucontainer{
   align-content: center;
   align-items: center;
@@ -113,27 +129,30 @@ body {
   display: flex;
   text-align: center;
 }
+/*Diseño de mi título de página*/
 h1{
-    display: flex;
-    justify-content: center;
-    font-family: 'Great Vibes', cursive;
-    font-size: 6rem;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-     color:rgb(212, 186, 186);
-  }
-
+  display: flex;
+  justify-content: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:rgb(212, 186, 186);
+}
+/*Coloca imagen de portada*/
   .imagen {
     display: flex;
     background: url(../Imagenes/Portada.jpg) repeat-x;
     height: 180px;
     padding: 0;
   }
+  /*Centra el texto de la portada*/
   .textoCentrado {
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  /*Diseño del navbar*/
   .Nav{
     margin-top: 1px;
     border: 2px solid black;
@@ -142,7 +161,7 @@ h1{
     background-color: antiquewhite;
     font-size: 18px;
 }
-  
+  /*transicion para los botones del navbar*/
 .BtnNav{
     transition-property: background-color, color;
     transition-duration: 1s;
@@ -167,8 +186,13 @@ h1{
     background-color:coral;
     color:black;
 }
+/*diseño del slideshow en el index.html*/
+/*Oculta la zona que no quiero que se muestre*/
+.presentacion {
+  overflow: hidden;
+}
   .slidershow{
-    overflow: hidden;
+    display: inline;
     max-width: 500px;
     height: auto;
   }
@@ -203,13 +227,13 @@ h1{
     height: 500px;
     display: flex;
   }
-  
+  /*Como este slideshow solo coloca las imagens una al lado de otra se hace esto para pasar a la siguiente*/
   .slide{
     width: 20%;
     transition: 0.6s;
   }
   .slide img{
-    width: 100%;
+    max-width: 500%;
     height: 100%;
   }
   
@@ -228,4 +252,15 @@ h1{
   #r5:checked ~ .s1{
     margin-left: -80%;
   }
-  
+.maps {
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.Destacado{
+  width: 100px;
+  height: 100px;
+}
