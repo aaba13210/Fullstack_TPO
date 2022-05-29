@@ -75,6 +75,7 @@ body {
 }
 .grid_menu{
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   gap: 40px;
   text-align: center;
@@ -90,7 +91,7 @@ body {
       grid-template:
       "header header" 180px
       "navbar navbar" 25px
-      "sidebar-derecho  main"  500px 
+      "sidebar-derecho  main"  auto 
       "sidebar sidebar" auto
       "footer footer" 100px /
       auto  auto ;
