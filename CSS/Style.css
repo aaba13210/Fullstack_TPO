@@ -278,11 +278,11 @@ h1{
   margin: auto;
 }
 
+/*Definicion de colores en texto del formulario*/
 :root {
-  --cfondo: rgb(207, 211, 212);
   --cnegro: black;
   --ctexto: rgb(14, 81, 88);
-  --ctextoDark: rgb(1, 35, 39);
+  --ccuadroenviar: rgb(218, 139, 37);
   --cblanco: white;
   --error: rgb(184, 31, 31);
 }
@@ -301,22 +301,14 @@ h1{
   color: var(--cnegro);
 }
 
-/* ---- FORMULARIO ---- */
-
+/*Diseño del formulario*/
 .form {
-  /* border: 3px solid green; */
-  border-top: 2px solid var(--cnegro);
   max-width: auto;
   padding: 30px 50px;
   margin: auto;
   margin-top: 10px;
-  background: linear-gradient(
-    0deg,
-    var(--cfondoForm1) 0%,
-    var(--cfondoForm2) 50%
-  );
 }
-
+/*Diseño letras del titulo formulario*/
 .form-titulo {
   font-weight: bold;
   font-size: 30px;
@@ -326,6 +318,7 @@ h1{
   letter-spacing: 3px;
 }
 
+/*Espaciado entre campos del formulario*/
 .form-input {
   margin-bottom: 30px;
 }
@@ -333,11 +326,12 @@ h1{
 .form-input label {
   display: block;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 1.5rem;
   color: var(--ctexto);
 }
-
+/*Diseño del input al llenar el formulario*/
 .form-input input {
+  text-align: center;
   width: 100%;
   border: none;
   outline: none;
@@ -345,16 +339,18 @@ h1{
   border-bottom: 1px solid var(--ctexto);
 }
 
+/*Cambia a negrita el campo que se tenga selecionado*/
 .form-input input:focus + label {
   font-weight: bold;
   color: var(--cnegro);
 }
 
+/*Diseño de los terminos y condiciones*/
 .form-termsAndConditions {
   margin-left: 15px;
   position: relative;
   color: var(--ctexto);
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 .form-termsAndConditions label::before {
@@ -366,6 +362,7 @@ h1{
   left: -14px;
 }
 
+/*Diseño del botón enviar*/
 .form-boton input {
   background: var(--cnegro);
   color: var(--cblanco);
@@ -376,12 +373,12 @@ h1{
   margin-top: 40px;
   border: none;
 }
-
+/*Cambio de color en boton enviar del formulario*/
 .form-boton input:hover {
-  background: var(--ctextoDark);
+  background: var(--ccuadroenviar);
   transition: 0.5s;
 }
-
+/*Diseño de los mensajes de error*/
 .mensajeError {
   color: var(--error);
   margin-top: 0px;
@@ -389,7 +386,7 @@ h1{
   font-weight: bold;
   letter-spacing: 1px;
 }
-
+/*Diseño de texto correcto*/
 .mensajeCorrecto {
   text-align: center;
   font-weight: bold;
